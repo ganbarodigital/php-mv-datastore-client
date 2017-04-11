@@ -64,7 +64,7 @@ EOS;
         $stmt = PdoOperations\ExecuteStatement::using($dbConn, $sql, [], StorageReadFailed::class);
 
         $row = PdoOperations\FetchRow::using($stmt);
-        if ($row === null) {
+        if ($row === false) {
             return false;
         }
 
