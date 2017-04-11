@@ -7,7 +7,10 @@
 Added these data operations
 
 - `CreateAutoIncrement` - mysql
+- `ExecuteDdlQuery` - mysql
+- `ExecuteDmlQuery` - mysql
 - `HasAutoIncrement` - mysql
+- `HasColumn` - mysql
 - `HasPrimaryKey` - mysql
 
 Added support for the following PDO features
