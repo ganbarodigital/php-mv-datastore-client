@@ -57,11 +57,11 @@ class HasAutoIncrement
         $sql = <<<EOS
 SELECT  column_name
 FROM    INFORMATION_SCHEMA.COLUMNS
-WHERE   table_name = "?"
+WHERE   table_name = "{$table}"
 AND     extra = "auto_increment";
 EOS;
 
-        $stmt = PdoOperations\ExecuteStatement::using($dbConn, $sql, [$table], StorageReadFailed::class);
+        $stmt = PdoOperations\ExecuteStatement::using($dbConn, $sql, [], StorageReadFailed::class);
 
         $row = PdoOperations\FetchRow::using($stmt);
         if ($row === null) {
