@@ -11,3 +11,4 @@ Added these data operations
 Added support for the following PDO features
 
 - executing an SQL query
+- retrieving a single row
