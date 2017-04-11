@@ -8,6 +8,7 @@ Added these data operations
 
 - `CreateAutoIncrement` - mysql
 - `HasAutoIncrement` - mysql
+- `HasPrimaryKey` - mysql
 
 Added support for the following PDO features
 
