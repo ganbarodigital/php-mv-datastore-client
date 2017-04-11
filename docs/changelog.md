@@ -2,4 +2,12 @@
 
 ## develop branch
 
-Nothing yet
+### New
+
+Added these data operations
+
+- `CreateAutoIncrement` - mysql
+
+Added support for the following PDO features
+
+- executing an SQL query
