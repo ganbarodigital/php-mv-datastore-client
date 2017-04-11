@@ -1,0 +1,7 @@
+.couscous
+composer.lock
+.phpintel
+review/
+vendor/
+**/.tags*
+**/.DS_Store
