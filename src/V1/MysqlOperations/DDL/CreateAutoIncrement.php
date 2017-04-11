@@ -54,10 +54,18 @@ class CreateAutoIncrement
 {
     public static function using(PDO $dbConn, $table, $column)
     {
+        // is there an existing primary key that we need to drop first?
+        $dropPrimary = HasPrimaryKey::using($dbConn, $table);
         $sql = <<<EOS
 ALTER TABLE `{$table}`
 ADD COLUMN `{$column}` INT(11) NOT NULL AUTO_INCREMENT,
-DROP PRIMARY KEY,
+EOS;
+
+        if ($dropPrimary) {
+            $sql .= "DROP PRIMARY KEY," . PHP_EOL;
+        }
+
+        $sql .= <<<EOS
 ADD PRIMARY KEY (`{$column}`);
 EOS;
 
