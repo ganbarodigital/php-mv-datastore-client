@@ -52,7 +52,7 @@ use PDO;
  */
 class CreateAutoIncrement
 {
-    public static function execute(PDO $dbConn, $table, $column)
+    public static function using(PDO $dbConn, $table, $column)
     {
         $sql = <<<EOS
 ALTER TABLE `{$table}`
